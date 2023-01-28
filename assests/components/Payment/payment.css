@@ -113,6 +113,7 @@ label{
 
 .container{
     padding: 1rem 1rem;
+    border: none;
 }
 
 .container:first-child > div:first-of-type{

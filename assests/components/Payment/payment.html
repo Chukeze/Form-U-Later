@@ -24,7 +24,7 @@
     <main>
         <section>
             <form  action="" method="post" class="wrapper">
-                <div class="container">
+                <fieldset class="container">
                     <h1>Your Details</h1>
                     <div>
                         <div class="personal"><label for="first-name">First Name</label><input type="text" id="first-name" placeholder="Jane"/></div>
@@ -32,24 +32,24 @@
                         <div class="personal"><label for="email">Email</label><input type="email" id="email" placeholder="Jane@example.com"/></div>
                         <div class="personal"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="(123) 456-7890"/></div>
                     </div>
-                </div>
-                <div class="container">
+                </fieldset>
+                <fieldset class="container">
                     <h1 id="pay_method">Payment Method</h1>
                     <div>
                         <div class="payment" id="card">
-                            <label for="">Card Number</label>
-                            <input type="text" placeholder="0000-0000-0000"/>
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" placeholder="0000-0000-0000"/>
                         </div>
                         <div class="payment">
-                            <label for="">Expiry Date</label>
-                            <input type="text" placeholder="MM/YY"/>
+                            <label for="expire">Expiry Date</label>
+                            <input type="text" id="expire" placeholder="MM/YY"/>
                         </div>
                         <div class="payment">
-                            <label for="">Security Code</label>
-                            <input type="text" placeholder="000"/>
+                            <label for="cvc">Security Code</label>
+                            <input type="text" id="cvc" placeholder="000"/>
                         </div>
                     </div>
-                </div>
+                </fieldset>
                 <button type="submit">Pay Now</button>
             </form>
         </section>
