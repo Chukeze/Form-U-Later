@@ -59,10 +59,12 @@ header{
 .logo{
     order: 3;
 }
-.logo > h1{
+.logo > a{
     font-family: 'Kavoon', cursive;
     font-weight: var(--font-weight);
     font-size: 3rem;
+    text-decoration: none;
+    color: black;
 }
 
 input[type="search"]{
