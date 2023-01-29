@@ -1,0 +1,114 @@
+body{
+    height: 100vmax;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+
+    background-color: rgba(217, 217, 217, 1);
+    border-bottom: 1px rgba(150, 146, 146, 1);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+input[type="search"]{
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+
+.menu img{
+    width: 25px;
+    height: 25px;
+}
+
+main{
+    background-color: rgba(71, 174, 218, 1);
+    height: 100%;
+    width: 100%;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+
+    padding-block: 2rem 2rem;
+    
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 1rem;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5,1fr);
+    row-gap: 2rem;
+    column-gap: .5rem;
+}
+
+.names{
+    grid-area: 1/2 span;
+    height: 3rem;
+}
+.email{
+    grid-area: 2/2 span;
+    height: 3rem;
+}
+.id{
+    grid-area: 3/1/3/1;
+    height: 3rem;
+}
+.date{
+    grid-area: 3/2/3/2;
+    height: 3rem;
+}
+.location{
+    grid-area: 4/ 2 span;
+    height: 3rem;
+}
+.btn{
+    grid-area: 5/ 2 span;
+    justify-self: flex-end;
+
+    border: 1px solid white;
+    border-radius: 40px;
+    background-color: transparent;
+    padding: 1rem 6rem;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input{
+    border-radius: .5rem;
+    height: 50px;
+    padding: .5rem .1rem;
+    background-color: transparent;
+    text-align: center;
+}
+label{
+    color: white;
+}
+#Inc-ID{
+    background-color: black;
+    color: white;
+}
