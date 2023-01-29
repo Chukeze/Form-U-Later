@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap');
+:root{
+    --font-family:'Karma', serif;
+    --bg-color: rgba(71, 174, 218, 1);
+
+    --accent-color:rgba(217, 217, 217, 1);
+}
+
 body{
     height: 100vmax;
     width: 100vw;
     overflow: hidden;
     margin: 0;
     padding: 0;
+    font-family: var(--font-family);
+}
+
+h1{
+    text-align: left;
 }
 
 header{
@@ -12,9 +25,10 @@ header{
     align-items: center;
     padding: .5rem;
 
-    background-color: rgba(217, 217, 217, 1);
+    background-color: var(--accent-color);
     border-bottom: 1px rgba(150, 146, 146, 1);
 }
+
 
 a{
     text-decoration: none;
@@ -34,7 +48,7 @@ input[type="search"]{
 }
 
 main{
-    background-color: rgba(71, 174, 218, 1);
+    background-color: var(--bg-color);
     height: 100%;
     width: 100%;
 }
@@ -58,39 +72,42 @@ section{
 form{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
     row-gap: 2rem;
-    column-gap: .5rem;
+    column-gap: 2rem;
 }
 
 .names{
-    grid-area: 1/2 span;
-    height: 3rem;
-}
-.email{
     grid-area: 2/2 span;
     height: 3rem;
 }
-.id{
-    grid-area: 3/1/3/1;
+.email{
+    grid-area: 3/2 span;
     height: 3rem;
 }
+.id{
+    grid-area: 4/1/4/1;
+    height: 3rem;
+    margin-right: 3rem;
+}
 .date{
-    grid-area: 3/2/3/2;
+    grid-area: 4/2/4/2;
     height: 3rem;
 }
 .location{
-    grid-area: 4/ 2 span;
+    grid-area: 5/ 2 span;
     height: 3rem;
 }
 .btn{
-    grid-area: 5/ 2 span;
+    grid-area: 6/ 2 span;
     justify-self: flex-end;
 
-    border: 1px solid white;
+    border: 3px solid white;
     border-radius: 40px;
     background-color: transparent;
-    padding: 1rem 6rem;
+    padding: .1rem 3rem;
+    margin-bottom: 1rem;
+    color: white;
 }
 
 .inputs{
@@ -111,4 +128,24 @@ label{
 #Inc-ID{
     background-color: black;
     color: white;
+}
+
+@media (min-width: 768px){
+    .menu{
+        display: none;
+    }
+
+    .inputs input{
+        padding: .5rem 2rem;
+        width: 100%;
+    }
+
+    h1{
+        text-align: center;
+        color: white;
+    }
+    label{
+        line-height: 1rem;
+        width: max-content;
+    }
 }
