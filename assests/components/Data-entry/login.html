@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./data_entry.js" defer></script>
+    <title>Sessions</title>
+</head>
+<body>
+    <main>
+        <h1>Hello!</h1>
+        <div class="greetings-container">
+            <p>Welcome to Sessions, login so you can fulfill all your booking needs</p>
+        </div>
+        <form target="_blank" method="post">
+            <span>The mock user is JaneDoe and password is mock </span>
+            <div>
+                <label for="username">UserName</label>
+                <input type="text" name="username" id="username" placeholder="JaneDoe" required aria-required="true"/>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="mock" required aria-required="true">
+            </div>
+            <button  type="submit" onsubmit="login()">Login</button>
+        </form>
+    </main>
+</body>
+</html>

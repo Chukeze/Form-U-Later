@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./topform.css">
+    <title>Odin</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span></span>
+            <h1>ODIN</h1>
+        </div>
+    </header>
+    <section>
+        <div class="wrapper">
+            <div class="disclaimer padding-block">
+                <p>This is not a real online service! 
+                    You know you need something like this in your life to help 
+                    you realize your deepest dreams.
+                    Sign up <span class="styling">now</span> to get started.</p>
+                <p>You <span class="styling">know</span> you want to</p>
+            </div>
+            <form action="" method="post">
+                <div class="form-content padding-block">
+                    <h1>Let's do</h1>
+                    <div class="form-content-wrapper">
+                        <div class="form-input-container">
+                            <label for="">First Name</label>
+                            <input type="text" autocapitalize="words" required aria-required="true"/>
+                        </div>
+                        <div class="form-input-container">
+                            <label for="">Last Name</label>
+                            <input type="text" required aria-required="true"/>
+                        </div>
+                        <div class="form-input-container">
+                            <label for="">Email</label>
+                            <input type="email" inputmode="email" required aria-required="true"/>
+                        </div>
+                        <div class="form-input-container">
+                            <label for="">Phone Number</label>
+                            <input type="tel" inputmode="tel"/>
+                        </div>
+                        <div class="form-input-container">
+                            <label for="">Password</label>
+                            <input type="password" minlength="5" pattern="(\d{5} [Aa-Zz] [!-//*])" required aria-required="true"/>
+                        </div>
+                        <div class="form-input-container">
+                            <label for="">Confirm Password</label>
+                            <input type="password" minlength="5" required aria-required="true"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-container padding-block">
+                    <button type="submit">Create Account</button>
+                </div>
+                
+            </form>
+            <div class="padding-block">
+                <p>Already have an account? <span><a href="http://" target="_blank" rel="noopener noreferrer">Log in</a></span></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

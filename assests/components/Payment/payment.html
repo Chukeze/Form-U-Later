@@ -25,28 +25,32 @@
         <section>
             <form  action="" method="post" class="wrapper">
                 <fieldset class="container">
-                    <h1>Your Details</h1>
+                    <legend>Your Details</legend>
                     <div>
-                        <div class="personal"><label for="first-name">First Name</label><input type="text" id="first-name" placeholder="Jane"/></div>
+                        <div class="personal"><label for="first-name">First Name</label><input type="text" id="first-name"  autocomplete="cc-given-name" placeholder="Jane"/></div>
                         <div class="personal"><label for="last-name">Last Name</label><input type="text" id="last-name" placeholder="Doe"/></div>
-                        <div class="personal"><label for="email">Email</label><input type="email" id="email" placeholder="Jane@example.com"/></div>
-                        <div class="personal"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="(123) 456-7890"/></div>
+                        <div class="personal"><label for="email">Email</label><input type="email" id="email" inputmode="email" placeholder="Jane@example.com"/></div>
+                        <div class="personal"><label for="phone">Phone Number</label><input type="tel" inputmode="tel" id="phone" placeholder="(123) 456-7890"/></div>
                     </div>
                 </fieldset>
                 <fieldset class="container">
-                    <h1 id="pay_method">Payment Method</h1>
+                    <legend id="pay_method">Payment Method</legend>
                     <div>
                         <div class="payment" id="card">
-                            <label for="card-number">Card Number</label>
-                            <input type="text" id="card-number" placeholder="0000-0000-0000"/>
+                            <label for="card-number">*Card Number</label>
+                            <input type="text" autocomplete="cc-number" inputmode="numeric" id="card-number" name="card-number" placeholder="0000-0000-0000" required/>
                         </div>
                         <div class="payment">
-                            <label for="expire">Expiry Date</label>
-                            <input type="text" id="expire" placeholder="MM/YY"/>
+                            <label for="expire">*Expiry Date</label>
+                            <input type="date" autocomplete="cc-exp"  id="expire" name="expiry" placeholder="MM/YY" required/>
                         </div>
                         <div class="payment">
-                            <label for="cvc">Security Code</label>
-                            <input type="text" id="cvc" placeholder="000"/>
+                            <label for="cvc">*Security Code</label>
+                            <input type="text" autocomplete="cc-csc" inputmode="numeric" id="cvc" name="cvc" placeholder="000" required/>
+                        </div>
+                        <div class="payment">
+                            <label for="zip_code">Zip Code</label>
+                            <input type="text" autocomplete="postal-code" inputmode="numeric" pattern="(\d{5}([\-]\d{4})?)" placeholder="61242" title="Please enter a valid zip code example:65251" required aria-required="true" id="zip_code" name="zip_code">
                         </div>
                     </div>
                 </fieldset>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./data_entry.css">
+    <link rel="stylesheet" href="../../style/reset.css">
+    <script src="./data_entry.js" defer></script>
+    <title>Session Maker</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <svg class="icon">
+                    <use xlink:href="../../images/logo.svg#logo"></use>
+                </svg>
+            </div>
+            <p>Hi,<span id="nameofuser"></span></p>
+            <div class="notification"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li class="dropdown"><a href="">Sessions</a></li>
+                <li><a href="">Data</a></li>
+                <li class="dropdown"><a href="">Account Settings</a></li>
+                <li><a href="./login.html" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="info">
+            <article>
+                <h1>Create A Session</h1>
+                <p>Welcome to the session screen, here you can create a session.
+                    Once created they will see the deposit request in their email,
+                    and you'll see their deposit info on the document section of the screen.
+                    Also on the session section will have information regarding the session.
+                    The different areas of this form can be completed in any order.
+                    Once complete the session is tentatively set up and waiting for deposit confirmation in order to be ready to go.
+                </p>
+            </article>
+            <aside>
+                <span></span> 
+                 <svg class="icon" id="noti-icon">
+                    <use xlink:href="../../images/mdi_bell-badge.svg#bell-badge-no-noti"></use>
+                  </svg><!--<svg class="icon">
+                    <use xlink:href="#mdi_bell-badge"></use>
+                  </svg> -->
+            </aside>
+        </section>
+        <aside class="waiver">
+            <div class="waiver__title">
+                <svg class="icon">
+                    <use xlink:href="../../images/info-circle-fill.svg#info-circle-fill"></use>
+                </svg>
+                <h2>Deposit Waiver</h2>
+            </div>
+            <p>A session is only considered made if a deposit is truly secure,
+                and made 24hrs after booking. The payee who fails to make a secure payment will lose their appointment,
+                and be put in a "pay upfront" mode for one week.
+                Up front payment in exchange of a deposit for future session</p>
+        </aside>
+        <main>
+            <aside>
+                <div>
+                    <h3>Things you need to do</h3>
+                    <div class="holder">
+        
+                    </div>
+                </div>
+                <div>
+                    <h3> Sessions</h3>
+                    <div class="holder">
+        
+                    </div>
+                </div>
+                <div>
+                    <h3>Documents</h3>
+                    <div class="holder">
+        
+                    </div>
+                </div>
+            </aside>
+            <section>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </section>
+        
+        </main>
+    </div>
+</body>
+</html>

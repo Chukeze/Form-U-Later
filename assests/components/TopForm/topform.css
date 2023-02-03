@@ -1,0 +1,221 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(../../fonts/Norse-Bold.otf);
+}
+
+:root{
+    --primary-font-family:norse-bold;
+    --secondary-font-family:'Courier New', Courier, monospace;
+
+    --bg-color:gainsboro;
+    --image-overlay-color: rgba(0, 0, 0, .45);
+
+    --input-label-color:rgba(96, 93, 93, 0.85);
+}
+
+*,body,html{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+
+    font-family: norse-bold, sans-serif, system-ui, "Segoe UI", Roboto;
+}
+
+header{
+    flex: 1 0 auto;
+    background-image: url(../../images/Top-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 20%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    background-color: var(--image-overlay-color);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.logo > span{
+    background-image: url(../../images/odin-lined-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 2rem 2rem;
+}
+.logo> h1{
+    color: white;
+}
+
+section{
+    flex: 1 0 auto;
+    height: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+
+    padding-top: .5rem;
+}
+
+.disclaimer{
+    border-bottom: .05px solid gainsboro;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    width: 80ch;
+
+}
+
+.disclaimer > p:first-child{
+    margin-bottom: 1rem;
+}
+
+.disclaimer ~ p{
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.styling{
+    font-style: italic;
+}
+
+.form-content{
+    background-color: whitesmoke;
+    width: 100%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .45);
+}
+
+.form-content-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 40%;
+    gap: .5rem;
+
+    margin-top: 1rem;
+}
+
+.form-input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color: var(--input-label-color);
+}
+
+input{
+    height: 1.75rem;
+    padding: .5rem 2rem;
+    border: none;
+    box-shadow: inset 1px 1px 3px rgba(177, 175, 175, 0.85);
+
+    border-radius: .5rem;
+}
+
+input:valid,input:user-valid{
+    border-color: green;
+}
+input:invalid, input:user-invalid{
+    border-color: red;
+}
+.form-input-container:has(input:required) > label::after   {
+    content: '*';
+    color: red;
+}
+
+.form-input-container:has(input:optional:focus-within) > label::after{
+    content: " This field optional \0263A";
+    color: lightslategray;
+}
+.form-input-container:has(input[type="password"]:focus-within) > label::after{
+    content: " Minimum length 5 At least: 1 capital letter, 1 lowercase, 1 symbol, 1 number";
+    display: flex;
+    flex: content;
+    color: crimson;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button{
+    background-color: rgb(45, 64, 35);
+    padding: .75rem 3rem;
+    border-radius: .25rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(62, 91, 47);
+    font-size: larger;
+}
+/** Utility classes*/
+.padding-block{
+    padding: .5rem 2rem;
+}
+
+@media (max-width:1023px) {
+    header{
+        background-size: cover;
+        height: 100%;
+        flex: 0 3 auto;
+        width: 30%;
+    }
+    .logo{
+        flex-shrink: 3;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .logo > span{
+        padding: 1rem 1rem;
+    }
+    section{
+        flex: 0 5 auto;
+    }
+    .disclaimer{
+        width: 30ch;
+        height: fit-content;
+        
+    }
+    p,label{
+        font-size: .5rem;
+    }
+    .wrapper{
+        padding-top: .25rem;
+    }
+    .padding-block{
+        padding: .75rem 1rem;
+    }
+    input{
+        height: .75rem;
+    }
+}
+
+@media (min-width:1025px) {
+    .padding-block{
+        padding: 4rem 4rem;
+    }
+    header{
+        flex-grow: 2;
+    }
+}

@@ -28,7 +28,7 @@
                     
                     <div class="inputs names">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name"/>
+                        <input type="text" id="name" required/>
                     </div>
                     <div class="inputs email">
                         <label for="email">Email</label>
@@ -36,15 +36,15 @@
                     </div>
                     <div class="inputs id">
                         <label for="Inc-ID">Incident ID</label>
-                        <input type="text" id="Inc-ID" disabled/>
+                        <input type="text" id="Inc-ID" readonly aria-readonly="true"/>
                     </div>
                     <div class="inputs date">
                         <label for="date">Date Of Incident</label>
-                        <input type="datetime-local" id="date"/>
+                        <input type="datetime-local" id="date" required aria-required="true"/>
                     </div>
                     <div class="inputs location">
                         <label for="location">Incident Location</label>
-                        <input type="text" id="location"/>
+                        <input type="text" pattern="(\[a-z]^[A-Z](/d{3})?)" title="Please enter a physical location not a number like a zip code example:65251. So enter Room123 or Lunchroom" id="location" aria-required="true" required/>
                     </div>
                     <button class="btn"> Next </button>
                 </form>

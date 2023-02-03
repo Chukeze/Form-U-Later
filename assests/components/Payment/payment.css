@@ -101,11 +101,11 @@ section{
     padding: 1rem 1rem;
 }
 
-.container h1, .container label{
+legend, .container label{
     color: var(--text-color);
 }
 
-h1{
+legend{
     font-weight: var(--font-weight-bold);
 }
 
@@ -156,6 +156,18 @@ input:focus{
     border: .25rem black solid;
 }
 
+input:valid, input:user-valid{
+    border-color:green;
+}
+input:invalid,input:user-invalid{
+    border-color: red;
+    border-style: dashed;
+}
+
+.payment ~ input:invalid:required,
+.payment ~ input:user-invalid:required{
+    background-color: red;
+}
 
 
 button{

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --bg-color: rgba(242,240,240,1);
+    --accent-color: linear-gradient(180deg, rgba(32,86,190,1) 0%, rgba(0, 99, 247, .54) 100%);
+    --accent-color-one: rgba(162,216,240,.44);
+
+    --text-color-alternative: rgba(82,81,81,1);
+
+    --font-family: 'Kreon', serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+
+    display: grid;
+    grid-template-areas: "sidebar screens"
+                        "sidebar  screens";
+}
+header{
+    background: var(--accent-color);
+
+    grid-area: sidebar;
+    height: 100%;
+    padding-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    padding: 1rem;
+    position: relative;
+    left: -20%;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.dropdown{
+    display: flex;
+}
+
+#logout{
+    color: rgb(246, 0, 0);
+}
+.container{
+    grid-area: screens;
+
+    display: grid;
+    grid-template-areas: "title""waiver""activity";
+    padding: 2rem;
+    height: 100%;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+}
+
+.info > aside{
+    justify-self:stretch;
+    align-self: flex-start;
+    position: relative;
+    top: -25%;
+}
+
+.info > article> h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 3.5rem;
+    margin: 0;
+}
+
+.info > article > p {
+    color: var(--text-color-alternative);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 20.16px;
+}
+
+#noti-icon{
+    width: 10px;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.waiver{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-around;
+
+    background: var(--accent-color);
+    padding: .75rem .5rem;
+    height: max-content;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+.waiver__title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.waiver > p , .waiver__title > h2{
+    color: white;
+}
+
+.waiver__title > h2{
+    font-size: 32px;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+
+
+/**Reset**/
+p{ 
+    margin: 0;
+}
