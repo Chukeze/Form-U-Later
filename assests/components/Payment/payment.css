@@ -101,12 +101,14 @@ section{
     padding: 1rem 1rem;
 }
 
-legend, .container label{
+.container  label{
     color: var(--text-color);
 }
 
+
 legend{
     font-weight: var(--font-weight-bold);
+    color: white;
 }
 
 label{
@@ -224,4 +226,5 @@ button{
         text-align: center;
         color: var(--text-color);
     }
+
 }

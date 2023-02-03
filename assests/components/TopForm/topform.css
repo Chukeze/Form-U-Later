@@ -169,6 +169,9 @@ a{
     color:rgb(62, 91, 47);
     font-size: larger;
 }
+#home{
+    color: white;
+}
 /** Utility classes*/
 .padding-block{
     padding: .5rem 2rem;

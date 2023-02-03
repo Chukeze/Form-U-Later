@@ -1,0 +1,46 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rosybrown;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+
+.form-selection-container{
+    display: grid;
+    grid-template: repeat(2,1fr)/ repeat(4,250px);
+    place-items: center;
+    gap: .25rem;
+    padding: 2rem 1rem;
+}
+.forms{
+    width: 250px;
+    height: 250px;
+
+    background-color: grey;
+    border-radius: 1.5rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .5), inset 2px 2px 4px 4px rgba(70, 68, 68, 0.85), inset -2px -2px 4px 4px rgba(70, 68, 68, 0.85) ;
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,.45));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms:hover{
+    transform: perspective(500px) rotateX(45deg);
+    padding-bottom: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.forms > a{
+    text-decoration: none;
+}
