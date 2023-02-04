@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./assests/style/reset.css">
+    <script src="./script.js" defer></script>
     <title>Form Of Forms</title>
 </head>
 <body>
@@ -18,8 +19,8 @@
     <div class="wrapper">
         <h1>Type Of Forms</h1>
         <div class="form-selection-container">
-            <div class="forms"><a href="">Fancy</a></div>
-            <div class="forms"><a href="./assests/components/TopForm/The_odin_project_form.html">The Odin Project</a></div>
+            <div class="forms"><a href="./assests/components/TopForm/The_odin_project_form.html">Fancy</a></div>
+            <a class="content"><button class="forms"><p>The Odin Project</p></button></a>
             <div class="forms"><a href="./assests/components/Data-entry/data_entry.html">Data-entry</a></div>
             <div class="forms"><a href="./assests/components/Survey/survey.html">Survey</a></div>
             <div class="forms"><a href="./assests/components/Payment/payment.html">Payment</a></div>
@@ -28,6 +29,14 @@
             <div class="forms"><a href="./assests/components/Sign-Up/signup.html">Sign-Up</a></div>
         </div>
     </div>
+    <svg class="liquid" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="liquid">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="liquid" />
+            </filter>
+        </defs>
+    </svg>
 </section>
     <footer>
         <div class="wrapper">
