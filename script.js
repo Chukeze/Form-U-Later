@@ -2,7 +2,17 @@
 function  LoadingScreen () {
 
     const buttons = document.querySelectorAll('.forms');
-    var url = './assests/components/TopForm/The_odin_project_form.html'
+    var url = './assests/components/TopForm/The_odin_project_form.html';
+    let urlList =[{
+        0:'',
+        1:'./assests/components/TopForm/The_odin_project_form.html',
+        2:'./assests/components/Data-entry/data_entry.html',
+        3:'./assests/components/Survey/survey.html',
+        4:'./assests/components/Payment/payment.html',
+        5:'./assests/components/Incident-Report/incident_report.html',
+        6:'./assests/components/Contact_Us/contact.html',
+        7:'./assests/components/Sign-Up/signup.html',
+    }]
     buttons.forEach( el => el.addEventListener('click', ()=>{
         //create view
         let svg = document.querySelector('.liquid');
@@ -41,10 +51,22 @@ function  LoadingScreen () {
         //Load screen
         setTimeout(()=>{
             console.log("started");
-            const navigationTarget = document.querySelector('.content').href = url;
-            window.open(navigationTarget,target="_self");
+            console.log(urlList.indexOf);
+            buttons.forEach(le => ()=> {
+                let buttondata = le.getAttribute('data-id');
+                buttondata.forEach(buttondatas => {
+                    if(buttondatas >=0){
+                        url = urlList[-buttondatas++];
+                        console.log(url)
+                    }
+                    
+                });
+
+            })
             console.log("finished");
-        }, 3800);
+            const navigationTarget = document.querySelector('.content').href = url;
+            window.open(navigationTarget, target="_self");
+        }, 11800);
     }));
     
     
