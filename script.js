@@ -2,8 +2,8 @@
 function  LoadingScreen () {
 
     const buttons = document.querySelectorAll('.forms');
-    var url = './assests/components/TopForm/The_odin_project_form.html';
-    let urlList =[{
+    var url = '';
+    let urlList = {
         0:'',
         1:'./assests/components/TopForm/The_odin_project_form.html',
         2:'./assests/components/Data-entry/data_entry.html',
@@ -12,7 +12,8 @@ function  LoadingScreen () {
         5:'./assests/components/Incident-Report/incident_report.html',
         6:'./assests/components/Contact_Us/contact.html',
         7:'./assests/components/Sign-Up/signup.html',
-    }]
+    };
+    //console.log(urlList.entries)
     buttons.forEach( el => el.addEventListener('click', ()=>{
         //create view
         let svg = document.querySelector('.liquid');
@@ -51,22 +52,19 @@ function  LoadingScreen () {
         //Load screen
         setTimeout(()=>{
             console.log("started");
-            console.log(urlList.indexOf);
-            buttons.forEach(le => ()=> {
-                let buttondata = le.getAttribute('data-id');
-                buttondata.forEach(buttondatas => {
-                    if(buttondatas >=0){
-                        url = urlList[-buttondatas++];
-                        console.log(url)
-                    }
-                    
-                });
-
-            })
+            let buttondata = el.getAttribute('data-id');
+            const grabKeys = Object.keys(urlList);
+            for (const key of grabKeys) {
+                if(buttondata[key] == buttondata){
+                    let chosenUrl = buttondata[key];
+                    //console.log(urlList[p]);
+                    url = urlList[chosenUrl];
+                    const navigationTarget = document.querySelector('.content').href = url;
+                    window.open(navigationTarget, target="_self");
+                }
+            }
             console.log("finished");
-            const navigationTarget = document.querySelector('.content').href = url;
-            window.open(navigationTarget, target="_self");
-        }, 11800);
+        }, 800);
     }));
     
     
