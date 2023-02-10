@@ -64,7 +64,7 @@ function  LoadingScreen () {
                 }
             }
             console.log("finished");
-        }, 800);
+        }, 11800);
     }));
     
     
