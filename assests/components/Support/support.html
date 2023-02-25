@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="support.css">
+    <title>Support Us</title>
+</head>
+<body>
+    <header>
+        <img src="../../images/Logo.png" alt="">
+    </header>
+    <main>
+        <span class="blobs" id="top"></span>
+        <span class="blobs" id="bottom"></span>
+        <aside>
+            <h1>Let Connect</h1>
+            <p>Who Do You Want To Speak To?</p>
+        </aside>
+        <section>
+            <div class="wrapper">
+                <div class="flex">
+                    <button class=" chosen selection"><span><img src="../../images/sales.svg" alt=""></span> Sales Support</button>
+                    <button class="selection"><span><img src="../../images/user.svg" alt=""></span>User Support</button>
+                    <button class="selection"><span><img src="../../images/notebook.svg" alt=""></span>General Contact</button>
+                </div>
+                <form  action="">
+                    <fieldset  id="sales">
+                        <div class="inputs">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Full Name" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="company">Company</label>
+                            <input type="text" name="company" id="company" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="message">Message</label>
+                            <input type="text" name="message" id="message" required aria-required="true"/>
+                        </div>
+                        <button type="submit">Get In Touch</button>
+                    </fieldset>
+                    <fieldset class="hidden" id="user">
+                        <div class="inputs">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Full Name" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="userId">User ID</label>
+                            <input type="text" name="userId" id="userId" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="problem" id="types">Types Of Problem</label>
+                            <div class="options">
+                                <div>
+                                    <input type="radio" name="problem" id="problem" required aria-required="true"/>
+                                    <h3>System Issue</h3>
+                                </div>
+                                <div>
+                                    <input type="radio" name="problem" id="problem"> 
+                                    <h3>Language Issue</h3>  
+                                </div>     
+                                <div>
+                                    <input type="radio" name="problem" id="problem"> 
+                                    <h3>Performance Issue</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="message">Message</label>
+                            <input type="text" name="message" id="message" required aria-required="true"/>
+                        </div>
+                        <button type="submit">Get In Touch</button>
+                    </fieldset>
+                    <fieldset class="hidden" id="general">
+                        <div class="inputs">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Full Name" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required aria-required="true"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone"/>
+                        </div>
+                        <div class="inputs">
+                            <label for="message">Message</label>
+                            <input type="text" name="message" id="message" required aria-required="true"/>
+                        </div>
+                        <button type="submit">Get In Touch</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <aside>
+            <p>HeaderQuarters 482 sjain st 891 Houston, TX 69301</p>
+            <p>Phone: 888-888-8888</p>
+        </aside>
+    </main>
+    <script>
+        const buttons = document.querySelectorAll('.selection');
+        const forms = {
+            sales: document.querySelector('#sales'),
+            user: document.querySelector('#user'),
+            general: document.querySelector('#general')
+        };  
+        buttons.forEach(el => el.addEventListener('click', () =>{
+            function retrieveKeys(obj){
+                for(let [key, value] of Object.entries(obj)){
+
+                    //console.log(`${key} and ${value}`);
+                    if(key === '1' ){
+                        console.log(key);
+                        el.classList.add('chosen');
+                        forms.sales.classList.add('hidden');
+                        forms.user.classList.remove('hidden');
+                        forms.general.classList.add('hidden');
+                    }
+                    if(key === '2'){
+                        //console.log(key)
+                        el.classList.add('chosen');
+                        value.previousElementSibling.classList.remove('chosen');
+                        value.previousElementSibling.previousElementSibling.classList.remove('chosen');
+                        forms.sales.classList.add('hidden');
+                        forms.user.classList.add('hidden');
+                        forms.general.classList.remove('hidden');
+                    }
+                    if(key === '0'){
+                        forms.sales.classList.remove('hidden');
+                        forms.user.classList.add('hidden');
+                        forms.general.classList.add('hidden');
+                    }
+                }
+            }
+            retrieveKeys(buttons)
+            
+        }))
+    </script>
+</body>
+</html>

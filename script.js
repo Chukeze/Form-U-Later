@@ -4,7 +4,7 @@ function  LoadingScreen () {
     const buttons = document.querySelectorAll('.forms');
     var url = '';
     let urlList = {
-        0:'',
+        0:'./assests/components/Support/support.html',
         1:'./assests/components/TopForm/The_odin_project_form.html',
         2:'./assests/components/Data-entry/data_entry.html',
         3:'./assests/components/Survey/survey.html',
@@ -66,34 +66,6 @@ function  LoadingScreen () {
             console.log("finished");
         }, 11800);
     }));
-    
-    
 }
+LoadingScreen();
 
-function Loading(){
-    LoadingScreen();
-}
-
-    
-    //Show loading screen first then wait then navigate to screen
-
-    Loading();
-
-/*
-function myFunc() {
-    var url = './assests/components/TopForm/The_odin_project_form.html'
-    
-    //Show loading screen first then wait then navigate to screen
-    setTimeout(()=>{
-        console.log("started");
-        document.querySelector('.content').href = url;
-        console.log("finished");
-    }, 3800);
-    LoadingScreen();
-    /*setTimeout(() => {
-        document.querySelector('.content').href = url;
-        /*(function() {
-            setTimeout(,500);
-        })();
-    }, 5000);
-}*/
