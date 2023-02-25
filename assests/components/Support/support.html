@@ -126,22 +126,59 @@
             sales: document.querySelector('#sales'),
             user: document.querySelector('#user'),
             general: document.querySelector('#general')
-        };  
-        buttons.forEach(el => el.addEventListener('click', () =>{
-            function retrieveKeys(obj){
-                for(let [key, value] of Object.entries(obj)){
+        };
+        let entries = Object.entries(buttons);
+        console.log(entries[2][0])         
+        entries.forEach(el => el[1].addEventListener('click', () =>{
+            //let clickedKey = Object.keys(el.DOCUMENT_NODE.toString);
+            //console.log(el[0])
+            //console.log(`Hi i clikced  ${clickedKey}` );
+            changeFormViews(el[0],el[1])
+        }))
+        function retrieveKeys() {
+            let keys = Object.keys(buttons);
+            return key;
+        }
+        function changeFormViews(keys,value){
+            if(keys === '1'){
+                value.classList.add('chosen');
+                value.previousElementSibling.classList.remove('chosen');
+                value.nextElementSibling.classList.remove('chosen');
+                forms.sales.classList.add('hidden');
+                forms.user.classList.remove('hidden');
+                forms.general.classList.add('hidden');
+            }else if(keys === '2'){
+                value.classList.add('chosen');
+                value.previousElementSibling.classList.remove('chosen');
+                value.previousElementSibling.previousElementSibling.classList.remove('chosen');
+                forms.sales.classList.add('hidden');
+                forms.user.classList.add('hidden');
+                forms.general.classList.remove('hidden');
+            }
+            else {
+                value.classList.add('chosen');
+                value.nextElementSibling.nextElementSibling.classList.remove('chosen');
+                value.nextElementSibling.classList.remove('chosen');
+                forms.sales.classList.remove('hidden');
+                forms.user.classList.add('hidden');
+                forms.general.classList.add('hidden');
+            }
+        }
+            /*
 
-                    //console.log(`${key} and ${value}`);
-                    if(key === '1' ){
+                for(let value of Object.values(obj)){
+                    console.log(value);
+                    console.log(`${key} and ${value}`);
+                    if(key === '1' && value.textContent == "Sales Support" ){
                         console.log(key);
-                        el.classList.add('chosen');
+                        obj.classList.add('chosen');
                         forms.sales.classList.add('hidden');
                         forms.user.classList.remove('hidden');
                         forms.general.classList.add('hidden');
                     }
-                    if(key === '2'){
-                        //console.log(key)
-                        el.classList.add('chosen');
+                    if(key === '2' || value.textContent == "User Support"){
+                        console.log(key)
+                        obj.classList.add('chosen');
                         value.previousElementSibling.classList.remove('chosen');
                         value.previousElementSibling.previousElementSibling.classList.remove('chosen');
                         forms.sales.classList.add('hidden');
@@ -153,11 +190,8 @@
                         forms.user.classList.add('hidden');
                         forms.general.classList.add('hidden');
                     }
-                }
-            }
-            retrieveKeys(buttons)
-            
-        }))
+                }*/
+
     </script>
 </body>
 </html>
