@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="support.css">
+    <script src="support.js" defer></script>
     <title>Support Us</title>
 </head>
 <body>
@@ -120,78 +121,5 @@
             <p>Phone: 888-888-8888</p>
         </aside>
     </main>
-    <script>
-        const buttons = document.querySelectorAll('.selection');
-        const forms = {
-            sales: document.querySelector('#sales'),
-            user: document.querySelector('#user'),
-            general: document.querySelector('#general')
-        };
-        let entries = Object.entries(buttons);
-        console.log(entries[2][0])         
-        entries.forEach(el => el[1].addEventListener('click', () =>{
-            //let clickedKey = Object.keys(el.DOCUMENT_NODE.toString);
-            //console.log(el[0])
-            //console.log(`Hi i clikced  ${clickedKey}` );
-            changeFormViews(el[0],el[1])
-        }))
-        function retrieveKeys() {
-            let keys = Object.keys(buttons);
-            return key;
-        }
-        function changeFormViews(keys,value){
-            if(keys === '1'){
-                value.classList.add('chosen');
-                value.previousElementSibling.classList.remove('chosen');
-                value.nextElementSibling.classList.remove('chosen');
-                forms.sales.classList.add('hidden');
-                forms.user.classList.remove('hidden');
-                forms.general.classList.add('hidden');
-            }else if(keys === '2'){
-                value.classList.add('chosen');
-                value.previousElementSibling.classList.remove('chosen');
-                value.previousElementSibling.previousElementSibling.classList.remove('chosen');
-                forms.sales.classList.add('hidden');
-                forms.user.classList.add('hidden');
-                forms.general.classList.remove('hidden');
-            }
-            else {
-                value.classList.add('chosen');
-                value.nextElementSibling.nextElementSibling.classList.remove('chosen');
-                value.nextElementSibling.classList.remove('chosen');
-                forms.sales.classList.remove('hidden');
-                forms.user.classList.add('hidden');
-                forms.general.classList.add('hidden');
-            }
-        }
-            /*
-
-                for(let value of Object.values(obj)){
-                    console.log(value);
-                    console.log(`${key} and ${value}`);
-                    if(key === '1' && value.textContent == "Sales Support" ){
-                        console.log(key);
-                        obj.classList.add('chosen');
-                        forms.sales.classList.add('hidden');
-                        forms.user.classList.remove('hidden');
-                        forms.general.classList.add('hidden');
-                    }
-                    if(key === '2' || value.textContent == "User Support"){
-                        console.log(key)
-                        obj.classList.add('chosen');
-                        value.previousElementSibling.classList.remove('chosen');
-                        value.previousElementSibling.previousElementSibling.classList.remove('chosen');
-                        forms.sales.classList.add('hidden');
-                        forms.user.classList.add('hidden');
-                        forms.general.classList.remove('hidden');
-                    }
-                    if(key === '0'){
-                        forms.sales.classList.remove('hidden');
-                        forms.user.classList.add('hidden');
-                        forms.general.classList.add('hidden');
-                    }
-                }*/
-
-    </script>
 </body>
 </html>
