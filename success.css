@@ -1,0 +1,22 @@
+.success-modal{
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    color: white;
+    z-index: 1;
+    filter: drop-shadow(100vh 100vh 100vh gray) ;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.success-modal > button{
+    align-self: center;
+}
+.hidden{
+    display:none;
+}

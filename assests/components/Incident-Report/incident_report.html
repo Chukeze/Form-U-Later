@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./incident_report.css">
+    <link rel="stylesheet" href="../../../success.css">
+    <script src="../../../success.js" defer></script>
+    <script src="./incident_report.js" defer></script>
     <title>Incident Report</title>
 </head>
 <body>
@@ -23,7 +26,7 @@
         <section>
             <div class="wrapper">
                 
-                <form action="" method="post">
+                <form action="#">
                     <h1>Personal Details</h1>
                     
                     <div class="inputs names">
@@ -46,8 +49,12 @@
                         <label for="location">Incident Location</label>
                         <input type="text" pattern="(\[a-z]^[A-Z](/d{3})?)" title="Please enter a physical location not a number like a zip code example:65251. So enter Room123 or Lunchroom" id="location" aria-required="true" required/>
                     </div>
-                    <button class="btn"> Next </button>
+                    <button type="button" class="btn" onclick="showNextPage()"> Next </button>
                 </form>
+            </div>
+            <div class="success-modal hidden">
+                <h1>Success!</h1>
+                <button type="reset" id="close">Close</button>
             </div>
         </section>
     </main>

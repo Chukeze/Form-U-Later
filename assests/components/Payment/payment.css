@@ -17,19 +17,16 @@
 html,body{
     margin: 0;
     padding: 0;
-
 }
 
 body{
-    /* --padding: 2rem;
-    min-height: calc(100vh - (var(--padding) * 2)); */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     font-family: var(--font-family);
-    /* min-height: 100vh;
-    min-width: 100vh; */
-    overflow-x: hidden;
+    height: 100dvh;
+    /*min-height: 100vh;
+    min-width: 100vh;*/ 
 }
 
 .padding-block{
@@ -44,7 +41,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: .5rem;
     column-gap: 1rem;
 }
 
@@ -106,7 +103,7 @@ section{
 }
 
 
-legend{
+fieldset > legend{
     font-weight: var(--font-weight-bold);
     color: white;
 }
@@ -205,7 +202,7 @@ button{
 
     .container:has(.payment ) > div {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
         padding: 1rem 1rem;
     }
