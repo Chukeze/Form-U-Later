@@ -297,3 +297,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, te
     background-color: rgba(139, 195, 74, 0.25);
     border: 1px solid #8BC34A;
 }
+
+.goHome{
+    border: 1px darkcyan dashed;
+    height: 50px;
+    width: max-content;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    box-shadow: #9b9a9a 0 2px 2px 2px;
+}
