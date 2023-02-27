@@ -71,7 +71,7 @@ h1 {
 /* Form Stuff */
 #commentform input[type="text"], #commentform input[type="email"], #commentform input[type="url"], #commentform textarea {
     background-color: #fff;
-    border: 1px solid #d8d8d8;
+    border: 1px solid #9b9a9a;
     padding: 24px 10px 12px;
     font-size: 16px;
     font-size: 1rem;
